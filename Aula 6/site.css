@@ -1,0 +1,18 @@
+.box{
+    display: flex;
+    /*flex-direction: row;
+    flex-wrap: wrap;*/
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    align-content: center;
+    gap: 10px;
+    background-color: aliceblue;
+    border: 1px solid red;
+}
+.item{
+    border: 1px solid black;
+    background-color: aqua;
+   
+}
