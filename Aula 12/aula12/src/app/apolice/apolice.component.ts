@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ApoliceComponent implements OnInit {
   valorApolice: number = 0;
+  apolices: any = [
+    { nome: 'José', sexo: 'M', idade: 25, valorAutomovel: 1000 },
+    { nome: 'Pedro', sexo: 'M', idade: 26, valorAutomovel: 1000 },
+    { nome: 'Maria', sexo: 'F', idade: 25, valorAutomovel: 1000 },
+  ];
   constructor() {}
 
   ngOnInit(): void {}
