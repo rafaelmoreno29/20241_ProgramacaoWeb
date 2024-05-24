@@ -1,5 +1,27 @@
-<h1>{{ titulo }}</h1>
-<input class="form-control" type="number" [(ngModel)]="numero1" />
-<input class="form-control" type="number" [(ngModel)]="numero2" />
-<button class="btn btn-primary" (click)="somar()">Somar</button>
-<p>Resultado: {{ resultado }}</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table table-hover table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Imagem</th>
+            <th scope="col">Nome</th>
+            <th scope="col">E-mail</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let usu of usuarios">
+            <td><img [src]="usu.imagem" /></td>
+            <td>{{ usu.nome }}</td>
+            <td>{{ usu.email }}</td>
+            <td>
+              <a class="btn btn-primary">Editar</a>
+              <button class="btn btn-danger">Excluir</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

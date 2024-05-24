@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UsuarioService } from 'src/app/services/usuario.service';
 
 @Component({
   selector: 'app-lista-usuario',
@@ -6,15 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lista-usuario.component.css'],
 })
 export class ListaUsuarioComponent implements OnInit {
-  titulo: string = 'Lista de Usuários';
-  numero1: number = 0;
-  numero2: number = 0;
-  resultado: number = 0;
-  constructor() {}
+  usuarios: any = [];
+  constructor(private usuarioService: UsuarioService) {}
 
-  ngOnInit(): void {}
-
-  somar() {
-    this.resultado = this.numero1 + this.numero2;
+  ngOnInit(): void {
+    this.usuarioService.getUsuario().subscribe((data) => {
+      this.usuarios = data;
+      console.log(this.usuarios);
+    });
   }
 }

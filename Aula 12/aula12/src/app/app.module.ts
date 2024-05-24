@@ -13,15 +13,28 @@ import { PaginaNaoEncontradaComponent } from './pagina-nao-encontrada/pagina-nao
 import { TelaPaiComponent } from './tela-pai/tela-pai.component';
 import { TelaFilha1Component } from './tela-pai/tela-filha1/tela-filha1.component';
 import { TelaFilha2Component } from './tela-pai/tela-filha2/tela-filha2.component';
+import { HttpClientModule } from '@angular/common/http';
+import { InserirUsuarioComponent } from './inserir-usuario/inserir-usuario.component';
 
 @NgModule({
-  declarations: [AppComponent, MenuSuperiorComponent, ApoliceComponent, ExemploDiretivaComponent, PaginaNaoEncontradaComponent, TelaPaiComponent, TelaFilha1Component, TelaFilha2Component],
+  declarations: [
+    AppComponent,
+    MenuSuperiorComponent,
+    ApoliceComponent,
+    ExemploDiretivaComponent,
+    PaginaNaoEncontradaComponent,
+    TelaPaiComponent,
+    TelaFilha1Component,
+    TelaFilha2Component,
+    InserirUsuarioComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     UsuarioModule,
     FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
