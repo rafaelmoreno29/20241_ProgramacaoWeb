@@ -6,11 +6,13 @@ import { PaginaNaoEncontradaComponent } from './pagina-nao-encontrada/pagina-nao
 import { TelaPaiComponent } from './tela-pai/tela-pai.component';
 import { TelaFilha1Component } from './tela-pai/tela-filha1/tela-filha1.component';
 import { TelaFilha2Component } from './tela-pai/tela-filha2/tela-filha2.component';
+import { InserirUsuarioComponent } from './inserir-usuario/inserir-usuario.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/apolice', pathMatch: 'full' },
   { path: 'apolice', component: ApoliceComponent },
   { path: 'lista-usuario', component: ListaUsuarioComponent },
+  { path: 'inserir-usuario', component: InserirUsuarioComponent },
   {
     path: 'tela-pai',
     component: TelaPaiComponent,
